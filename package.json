@@ -1,0 +1,22 @@
+{
+  "name": "anitoshi",
+  "private": true,
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "dev": "pnpm --filter @anitoshi/age-core build && pnpm --filter @anitoshi/web dev",
+    "build": "pnpm --filter @anitoshi/age-core build && pnpm --filter @anitoshi/web build",
+    "test": "vitest run",
+    "test:core": "pnpm --filter @anitoshi/age-core test",
+    "test:web": "vitest run apps/web",
+    "test:e2e": "playwright test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.56.0",
+    "prettier": "^3.9.10",
+    "typescript": "~5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
