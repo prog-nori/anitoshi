@@ -66,7 +66,7 @@ export function App() {
               動物 <span aria-hidden="true">→</span> 人間
             </button>
           </div>
-          <span className="privacy-note">入力した年齢は外部に送信されません</span>
+          <span className="privacy-note">年齢の計算は端末内で完結します</span>
         </div>
         <div className="workspace">
           <AnimalSelector selected={selected} onSelect={setSelected} />

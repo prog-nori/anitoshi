@@ -33,3 +33,9 @@ E2EはローカルChromeを使用し、必要なら開発サーバーを起動�
 ## 5種の慣用換算表追加
 
 5種の全掲載点の再現、区分線形補間、原点仮定と上側延長の警告を検証。各種で人間0〜1536か月の全入力を往復し、単調性と精度を確認。320pxの画面で全5種を切り替え、両方向の数値・出典・範囲外ラベルを確認。犬の既存テストもすべて通過。新規の表では掲載内容の確認と科学的妥当性の確認を区別している。
+
+## SNS共有
+
+共有URLからクエリ・フラグメントを除外し、ローカルURLを送らないこと、X・LINEの文面エンコード、0歳・128歳の仮の計算ラベル、逆方向の表現をVitestで検証（合計52件）。Playwrightには320pxでの共有プレビュー・PNG生成とダウンロード・結果変更時の画像リセット・共有キャンセルを追加。画像共有メニューはモックで検証し、実機SNSへの投稿は未実施。
+
+実装参照： [LINE公式URLスキーム](https://developers.line.biz/en/docs/messaging-api/using-line-url-scheme/#sending-text-messages)、[Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share)。LINEの共有URLスキームはiOS/Android向け。Instagramは画像保存後の手動添付に対応。

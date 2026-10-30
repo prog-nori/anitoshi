@@ -2,6 +2,7 @@ import type { ConversionResult as Result, Direction } from '@anitoshi/age-core';
 import { disclaimer, toViewModel } from '../adapters/conversion';
 import type { Persona } from '../data/personas';
 import { AnimalIcon } from './ui/AnimalIcon';
+import { ShareResults } from './ShareResults';
 import { ModelExplanation } from './ModelExplanation';
 export function ConversionResult({
   result,
@@ -89,6 +90,14 @@ export function ConversionResult({
         </ul>
       )}
       {result && <ModelExplanation result={result} />}
+      {result?.status === 'converted' && (
+        <ShareResults
+          key={JSON.stringify([result, persona.id, direction])}
+          result={result}
+          persona={persona}
+          direction={direction}
+        />
+      )}
     </section>
   );
 }

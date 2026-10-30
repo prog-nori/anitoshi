@@ -851,3 +851,66 @@ footer a {
   font-size: clamp(32px, 4vw, 54px);
   letter-spacing: -2px;
 }
+
+.share-details {
+  border-top: var(--line);
+  font-size: 12px;
+}
+.share-details summary {
+  cursor: pointer;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 800;
+}
+.share-preview {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: var(--white);
+  padding: 12px;
+  border: 1px solid var(--ink);
+  margin: 12px 0;
+}
+.share-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 0;
+}
+.share-actions a,
+.share-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 48px;
+  border: var(--line);
+  padding: 8px;
+  background: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.share-actions :disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.share-actions a:hover,
+.share-actions button:hover {
+  background: var(--yellow);
+}
+.share-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--ink);
+}
+.share-url {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--ink);
+  background: var(--white);
+  padding: 8px;
+  font-size: 12px;
+}

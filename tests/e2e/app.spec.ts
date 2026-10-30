@@ -128,9 +128,9 @@ test('all five reference models work both ways with sources and boundary warning
     await page.getByLabel('あなたの年齢').fill('40');
     await expect(page.getByRole('status')).toContainText(expected!);
     await expect(page.getByText('慣用換算表による目安', { exact: true })).toBeVisible();
-    await page.locator('summary').click();
+    await page.locator('.model-details > summary').click();
     await expect(page.locator('.source a').first()).toBeVisible();
-    await page.locator('summary').click();
+    await page.locator('.model-details > summary').click();
     for (const value of ['0', '128']) {
       await page.getByLabel('あなたの年齢').fill(value);
       await expect(page.getByText('表の範囲外の仮の計算', { exact: true })).toBeVisible();
